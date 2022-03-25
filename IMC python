@@ -1,0 +1,33 @@
+#Autor: Jônatas
+
+idade = 0
+peso = 0
+nome = 0
+altura = 0
+imc = 0
+imcM = 0
+
+print ()
+nome = input ("Digite seu nome: ")
+idade = int(input ("Digite sua idade: "))
+peso = float(input ("Digite seu peso: "))
+altura = float(input ("Digite sua altura: "))
+
+imc = peso / altura**2
+
+if (imc < 18.4):
+    imcM = 'ABAIXO DO PESO'
+if (imc > 18.5 and 24.9):
+    imcM = 'no PESO NORMAL'
+if (imc > 25.0 and 29.9):
+    imcM = 'em SOBREPESO'
+if (imc > 30.0 and 34.9):
+    imcM = 'em OBESIDADE GRAU I'
+if (imc > 35.0 and 39.9):
+    imcM = 'em OBESIDADE GRAU II'
+if (imc > 40.0):
+    imcM = ' em OBESIDADE GRAU III'
+
+print ()
+print ("Olá "+nome+", seu índice de massa corpotal é: {:.2f}" .format(imc))
+print ("Seu IMC está "+str(imcM)+" em relação a sua estatura!")
